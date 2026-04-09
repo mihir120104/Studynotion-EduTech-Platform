@@ -156,7 +156,7 @@ function CourseDetails() {
               </div>
               <div>
                 <p className="">
-                  Created By {`${instructor.firstName} ${instructor.lastName}`}
+                  Created By {`${instructor?.firstName} ${instructor?.lastName}`}
                 </p>
               </div>
               <div className="flex flex-wrap gap-5 text-lg">
@@ -247,6 +247,7 @@ function CourseDetails() {
                       ? instructor.image
                       : `https://api.dicebear.com/5.x/initials/svg?seed=${instructor.firstName} ${instructor.lastName}`
                   }
+                  
                   alt="Author"
                   className="h-14 w-14 rounded-full object-cover"
                 />
